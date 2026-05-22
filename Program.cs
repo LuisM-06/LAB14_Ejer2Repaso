@@ -1,10 +1,13 @@
 using LAB14_Ejer2Repaso.Components;
+using LAB14_Ejer2Repaso.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<JsonService>();
 
 var app = builder.Build();
 
